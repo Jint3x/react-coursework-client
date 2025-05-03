@@ -15,6 +15,10 @@ export default function Page() {
     const [passwordError, setPasswordError] = useState();
 
     function handleRegister(e) {
+        if (usernameError !== undefined || passwordError !== undefined) {
+            return;
+        }
+
         fetch("http://localhost:8000/api/register", {
           method: 'POST',
           headers: {
