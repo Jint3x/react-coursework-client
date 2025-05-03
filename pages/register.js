@@ -10,7 +10,7 @@ import style from "../styles/register.module.css"
 export default function Page() {
     const router = useRouter()
     const [username, setUsername] = useState();
-    const [usernameError, setUsernameError] = useState("AAAA");
+    const [usernameError, setUsernameError] = useState();
     const [password, setPassword] = useState();
     const [passwordError, setPasswordError] = useState();
 
