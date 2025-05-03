@@ -1,0 +1,115 @@
+@media screen {
+    
+}
+@media (min-width: 0px) {
+    .card {
+        margin: 40px auto 0 auto;
+        padding: 10px 30px 20px;
+    }
+}
+
+@media (min-width: 600px) {
+    .card {
+        margin: 80px auto 0 auto;
+        padding: 10px 70px 20px;
+    }
+}
+
+.card {
+    max-width: 500px;
+    min-height: 300px;
+    background-color: #262626;
+    border-radius: 5px;
+}
+
+.card__header {
+    padding-top: 10px;
+    color: #B97ADC;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    margin-block-end: 1rem;
+}
+
+.card__welcome {
+    color: rgb(180, 180, 180);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-block-start: 1rem;
+}
+
+.card__inputs {
+    margin: 20px 0px;
+}
+
+.inputs {
+    margin-bottom: 20px;
+}
+
+.inputs__label {
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inputs__box {
+    height: 30px;
+    width: 100%;
+    background-color: #333333;
+    border-radius: 3px;
+    border: none;
+    padding-left: 10px;
+    color: white;
+}
+
+.inputs__box:focus {
+    outline-color: #B97ADC;
+    outline-width: 2px;
+}
+
+.inputs__error {
+    color: red;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.card__lower {
+    margin-top: 40px;
+
+}
+
+.card__button {
+    width: 100%;
+    background-color: #B97ADC;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    border-color: #B97ADC;
+}
+
+.card__button:hover {
+    background-color: #b275d3;
+}
+
+.card__button_text {
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+}
+
+.button_text__span {
+    color: #B97ADC;
+    padding-left: 5px;
+}
+
+.button_text__span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
