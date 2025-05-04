@@ -15,13 +15,13 @@ export default function Page() {
     const [password, setPassword] = useState();
     const [passwordError, setPasswordError] = useState(undefined);
 
-    function handleRegister(e) {
+    function handleLogin(e) {
         e.preventDefault();
         if (usernameError !== undefined || passwordError !== undefined) {
             return;
         }
 
-        fetch("http://localhost:8000/api/register", {
+        fetch("http://localhost:8000/api/login", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -37,6 +37,10 @@ export default function Page() {
                 const thirtyDaysInSeconds = 30 * 24 * 60 * 60;
                 document.cookie = `account=${result.data.account}; max-age=${thirtyDaysInSeconds}; path=/; samesite=Lax`;
                 router.push("/")
+            } else if (result.code === 1) { // Wrong password
+
+            } else if (result.code === 2) { // No such username exists
+
             }
         })
     }
@@ -94,9 +98,9 @@ export default function Page() {
     <div className={style.card}>
         <CardTop 
          header={"GraphCraft"}
-         welcome={"Sign up for GraphCraft"}
+         welcome={"Sign in for GraphCraft"}
         />
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleLogin}>
             <CardForm 
                 username={username}
                 handleUsername={handleUsername}
@@ -107,11 +111,11 @@ export default function Page() {
             />
 
             <CardLower 
-                btnText={"Sign Up"}
-                underText={"Already have an account?"} 
-                underRedirect={"Sign in"}
+                btnText={"Sign In"}
+                underText={"Don't have an account?"} 
+                underRedirect={"Sign Up"}
                 redirectLink={"/login"}
-                handleSubmit={handleRegister}
+                handleSubmit={handleLogin}
                 router={router}
             />
         </form>
