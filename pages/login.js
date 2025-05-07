@@ -15,7 +15,7 @@ export default function Page() {
     const [password, setPassword] = useState();
     const [passwordError, setPasswordError] = useState(undefined);
 
-    function handleLogin(e) {
+    async function handleLogin(e) {
         e.preventDefault();
         if (usernameError !== undefined || passwordError !== undefined) {
             return;
@@ -33,14 +33,15 @@ export default function Page() {
         })
         .then(res => res.json())
         .then(result => {
+            console.log(result.code)
             if (result.code === 0) {
                 const thirtyDaysInSeconds = 30 * 24 * 60 * 60;
                 document.cookie = `account=${result.data.account}; max-age=${thirtyDaysInSeconds}; path=/; samesite=Lax`;
                 router.push("/")
-            } else if (result.code === 1) { // Wrong password
-
-            } else if (result.code === 2) { // No such username exists
-
+            } else if (result.code === 1) { // No such username exists
+                setUsernameError(result.data.reason)
+            } else if (result.code === 2) { // 
+                setPasswordError(result.data.reason)
             }
         })
     }
@@ -114,7 +115,7 @@ export default function Page() {
                 btnText={"Sign In"}
                 underText={"Don't have an account?"} 
                 underRedirect={"Sign Up"}
-                redirectLink={"/login"}
+                redirectLink={"/register"}
                 handleSubmit={handleLogin}
                 router={router}
             />

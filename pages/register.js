@@ -33,10 +33,13 @@ export default function Page() {
         })
         .then(res => res.json())
         .then(result => {
+            console.log(result.code)
             if (result.code === 0) {
                 const thirtyDaysInSeconds = 30 * 24 * 60 * 60;
                 document.cookie = `account=${result.data.account}; max-age=${thirtyDaysInSeconds}; path=/; samesite=Lax`;
                 router.push("/")
+            } else if (result.code === 1) {
+                setUsernameError(result.data.reason)
             }
         })
     }
