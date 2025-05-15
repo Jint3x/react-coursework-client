@@ -1,0 +1,242 @@
+.app__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.app__title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.input__section {
+  width: 100%;
+  max-width: 36rem;
+  background-color: #262626;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.input__section_title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #B97ADC;
+}
+
+.error_message {
+  color: #F87171;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.input__form_fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form__group {
+}
+
+.form__label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #D1D5DB;
+  margin-bottom: 0.25rem;
+}
+
+.form__textarea,
+.form__input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #333333;
+  border: 1px solid #4B5563;
+  border-radius: 0.5rem;
+  color: white;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.form__textarea:focus,
+.form__input:focus {
+  outline: none;
+  border-color: #B97ADC;
+  box-shadow: 0 0 0 2px rgba(185, 122, 220, 0.5);
+}
+
+.form__textarea {
+  min-height: 80px; 
+  resize: vertical;
+}
+
+.submit_button {
+  width: 100%;
+  background-color: #B97ADC;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  font-size: 1rem;
+}
+
+.submit_button:hover {
+  background-color: #a768c9;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.submit_button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(185, 122, 220, 0.5),
+              0 4px 6px -1px rgba(0,0,0,0.1), 
+              0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.quotes__list_section {
+  width: 100%;
+  max-width: 36rem;
+}
+
+.quotes__list_title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #B97ADC;
+}
+
+.no_quotes_message {
+  text-align: center;
+  color: #9CA3AF;
+  background-color: #262626;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.quote__card_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.quote__card {
+  background-color: #262626;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.quote__card:hover {
+  transform: scale(1.02);
+}
+
+.quote__text {
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  color: #F3F4F6;
+  word-wrap: break-word;
+}
+
+.quote__author {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #B97ADC;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.quote__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
+  margin-top: 0.5rem;
+}
+
+.quote__action_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+}
+.quote__action_button:hover {
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.copy_button {
+  background-color: #3B82F6;
+}
+.copy_button:hover {
+  background-color: #2563EB;
+}
+
+.delete_button {
+  background-color: #EF4444;
+}
+.delete_button:hover {
+  background-color: #DC2626;
+}
+
+.button_icon {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+@media (min-width: 640px) {
+  .app__container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .app__title {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .input__section {
+    padding: 2rem;
+  }
+
+  .quote__card {
+    padding: 1.5rem;
+  }
+
+  .quote__actions {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.75rem; 
+  }
+
+  .quote__action_button {
+    width: auto;
+  }
+}
