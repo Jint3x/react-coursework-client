@@ -1,3 +1,31 @@
+@media (min-width: 0px) {
+  .logout_button {
+    width: 120px;
+    height: 35px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #B97ADC;
+    border-color: #B97ADC;
+    border-width: 2px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 885px) {
+  .logout_button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.logout_button:hover {
+  border-color: #a768c9;
+  color: #a768c9;
+}
+
 .app__container {
   min-height: 100vh;
   display: flex;
