@@ -9,6 +9,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #333333; /* Body background color */
-  color: white; /* Default text color */
+  background-color: #333333;
+  color: white;
+}
+
+:root {
+  --body-bg: #333333;
+  --foreground-bg: #262626;
+  --special-color: #B97ADC;
+  --special-color-darker: #a768c9;
+  --text-color: white;
+  --text-color-light: #D1D5DB;
+  --border-color: #4B5563;
+  --error-color: #F87171;
+  --success-color: #34D399;
+  --tried-card-bg: #2a3b2a; 
+  --tried-card-border: var(--success-color);
+
+  --button-blue: #3B82F6;
+  --button-blue-darker: #2563EB;
+  --button-red: #EF4444;
+  --button-red-darker: #DC2626;
+  --button-gray: #6B7280;
+  --button-gray-darker: #4B5563;
+  --button-green: var(--success-color);
+  --button-green-darker: #2aa77c;
+
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }

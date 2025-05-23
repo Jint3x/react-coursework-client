@@ -1,0 +1,54 @@
+
+@media (min-width: 0px) {
+  .logout_button {
+    width: 120px;
+    height: 35px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #B97ADC;
+    border-color: #B97ADC;
+    border-width: 2px;
+    margin: 20px auto;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin: 0px;
+  }
+
+  .navbar {
+    display: flex;
+    width: 180px;
+    position: absolute;
+    justify-content: space-between;
+    align-items: start;
+    left: 20px;
+    top: 20px;
+    opacity: 0.8;
+  }
+
+  .navbar > p {
+    color: #B97ADC;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
+  }
+
+  .navbar > p:hover {
+    text-decoration: underline;
+    text-decoration-color: #a768c9;
+  }
+
+  .selected_paragraph {
+    text-decoration: underline;
+    text-decoration-color: #3B82F6;
+  }
+}
+
+.logout_button:hover {
+  border-color: #a768c9;
+  color: #a768c9;
+}
