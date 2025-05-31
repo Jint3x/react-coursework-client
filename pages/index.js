@@ -4,7 +4,7 @@ import getAccountCookie from "../components/getAccountCookie"
 import Quoter from '../components/Quoter';
 import Welcome from '../components/Welcome';
 import { Navbar, LogoutBtn } from '../components/Headers';
-
+import NewExperience from '../components/NewExperience';
 
 export default function MyThing() {
   const router = useRouter()
@@ -32,7 +32,7 @@ export default function MyThing() {
         router.push("/login")
       }
     })
-  })
+  }, [])
 
   return (
     <>
@@ -51,11 +51,10 @@ export default function MyThing() {
       </Quoter>
       </>
       :
-      <>
+      <NewExperience>
       <Navbar setRoute={setRoute} route={route} />
       <LogoutBtn />
-      <p>New Experience</p>
-      </>
+      </NewExperience>
     }
     </>
   )
