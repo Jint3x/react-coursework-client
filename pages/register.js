@@ -96,8 +96,8 @@ export default function Page() {
   return (
     <div className={style.card}>
         <CardTop 
-         header={"GraphCraft"}
-         welcome={"Sign up for GraphCraft"}
+         header={"ToolBox"}
+         welcome={"Sign up for ToolBox"}
         />
         <form onSubmit={handleRegister}>
             <CardForm 

@@ -98,8 +98,8 @@ export default function Page() {
   return (
     <div className={style.card}>
         <CardTop 
-         header={"GraphCraft"}
-         welcome={"Sign in for GraphCraft"}
+         header={"ToolBox"}
+         welcome={"Sign in for ToolBox"}
         />
         <form onSubmit={handleLogin}>
             <CardForm 
